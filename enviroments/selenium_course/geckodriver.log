@@ -1,0 +1,25 @@
+1637266644724	geckodriver	INFO	Listening on 127.0.0.1:57253
+1637266647774	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57254" "-no-remote" "-profile" "C:\\Users\\CA81~1\\AppData\\Local\\Temp\\rust_mozprofile2FavOK"
+1637266648516	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\\u041C\u0438\u0448\u0430\\AppData\\Local\\Temp\\rust_mozprofile2FavOK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57254/devtools/browser/5a3d1c80-6855-4b80-865e-bfff0ba9aafb
+1637266650484	Marionette	INFO	Listening on port 57261
+1637266650967	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stepik.azureedge.net/static/frontend-build/vendor.js?v=1636970676, line 6074: unreachable code after return statement
+JavaScript warning: https://mc.yandex.ru/metrika/tag.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1637266657202	Marionette	INFO	Stopped listening on port 57261
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1637267204097	geckodriver	INFO	Listening on 127.0.0.1:57632
+1637267207145	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57633" "-no-remote" "-profile" "C:\\Users\\CA81~1\\AppData\\Local\\Temp\\rust_mozprofileOQIUv0"
+1637267207527	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\\u041C\u0438\u0448\u0430\\AppData\\Local\\Temp\\rust_mozprofileOQIUv0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57633/devtools/browser/1c0018df-6128-4f81-9c16-1e13092757fc
+1637267209285	Marionette	INFO	Listening on port 57640
+1637267209325	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://selenium1py.pythonanywhere.com/ru/, line 374: ReferenceError: oscar is not defined
+1637267210681	Marionette	INFO	Stopped listening on port 57640
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
