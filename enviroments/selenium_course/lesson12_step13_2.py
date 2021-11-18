@@ -1,38 +1,44 @@
-from selenium import webdriver
-import time
 import unittest
+import time
+from selenium import webdriver
 
-class TestRegistrtion(unittest.TestCase):
 
-    def test_welcome(self):
-        link = "http://suninjuly.github.io/registration2.html"
+class TestFormFill(unittest.TestCase):
+
+    def test_formFill01(self):
+        fields = ['First name*', 'Last name*', 'Email*']
         browser = webdriver.Chrome()
-        browser.get(link)
-
-        # Ваш код, который заполняет обязательные поля
-        elements = browser.find_elements_by_xpath("//input[@required]")
-        for element in elements:
-            element.send_keys("Мой ответ")
-
-        # Отправляем заполненную форму
-        button = browser.find_element_by_css_selector("button.btn")
-        button.click()
-
-        # Проверяем, что смогли зарегистрироваться
-        # ждем загрузки страницы
+        browser.get("http://suninjuly.github.io/registration1.html")
+        for field in fields:
+            input_text = browser.find_element_by_xpath(f'//label[text()="{field}"]/following-sibling::input')
+            input_text.send_keys('Any text')
         time.sleep(1)
-
-        # находим элемент, содержащий текст
-        welcome_text_elt = browser.find_element_by_tag_name("h1")
-        # записываем в переменную welcome_text текст из элемента welcome_text_elt
-        welcome_text = welcome_text_elt.text
-        # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
-        self.assertEqual(welcome_text, "Congratulations! You have successfully registered!")
-
-        # ожидание чтобы визуально оценить результаты прохождения скрипта
-        time.sleep(10)
-        # закрываем браузер после всех манипуляций
+        browser.find_element_by_css_selector('button.btn').click()
+        time.sleep(1)
+        success_text = browser.find_element_by_tag_name('h1').text
+        self.assertEqual("Congratulations! You have successfully registered!", success_text, "Congratulations page "
+                                                                                             "did not load.")
+        time.sleep(3)
         browser.quit()
+
+
+    def test_formFill02(self):
+        fields = ['First name*', 'Last name*', 'Email*']
+        browser = webdriver.Chrome()
+        browser.get("http://suninjuly.github.io/registration2.html")
+        for field in fields:
+            input_text = browser.find_element_by_xpath(f'//label[text()="{field}"]/following-sibling::input')
+            input_text.send_keys('Any text')
+        time.sleep(1)
+        browser.find_element_by_css_selector('button.btn').click()
+        time.sleep(1)
+        success_text = browser.find_element_by_tag_name('h1').text
+        self.assertEqual("Congratulations! You have successfully registered!", success_text, "Congratulations page "
+                                                                                             "did not load.")
+        time.sleep(1)
+        browser.quit()
+
+
 
 if __name__ == "__main__":
     unittest.main()
