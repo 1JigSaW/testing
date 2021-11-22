@@ -16,3 +16,4 @@ class ProductPageLocators():
 	ALERT_BOOK = (By.CSS_SELECTOR, '.alertinner strong')
 	PRICE = (By.CSS_SELECTOR, 'div.product_main p.price_color')
 	PRICE_BASKET = (By.CSS_SELECTOR, ".alert-noicon.alert-info p strong")
+	SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alertinner")

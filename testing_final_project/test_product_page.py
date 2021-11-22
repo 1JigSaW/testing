@@ -20,7 +20,8 @@ def test_guest_can_add_product_to_basket(browser, link):
 	link_get = link
 	page = ProductPage(browser, link_get)
 	page.open()
+	page.should_not_be_success_message()
 	page.add_to_basket()
 	page.should_equal_title_and_alert()
 	page.should_equal_price_and_price_basket()
-
+	page.should_not_disappeared_success_message()
