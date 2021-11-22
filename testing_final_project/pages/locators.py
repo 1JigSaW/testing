@@ -20,6 +20,7 @@ class LoginPageLocators():
 	PASSWORD_FIELD_2 = (By.CSS_SELECTOR, "#id_registration-password2")
 	SUBMIT = (By.CSS_SELECTOR, "[name='registration_submit']")
 
+
 class ProductPageLocators():
 	BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
 	TITLE_BOOK = (By.TAG_NAME, 'h1')
@@ -27,6 +28,7 @@ class ProductPageLocators():
 	PRICE = (By.CSS_SELECTOR, 'div.product_main p.price_color')
 	PRICE_BASKET = (By.CSS_SELECTOR, ".alert-noicon.alert-info p strong")
 	SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alertinner")
+
 
 class BasketPageLocators():
 	PRODUCT_ITEMS = (By.CSS_SELECTOR, "div.basket-items")

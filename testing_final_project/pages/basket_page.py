@@ -8,11 +8,9 @@ class BasketPage(BasePage):
 			"Product is presented, but should not be" 
 
 	def should_alert_empty_basket(self):
-		alert = self.browser.find_element(*BasketPageLocators.ALERT_EMPTY_BASKET)
-		alert = alert.text
-		print(alert)
-		assert alert == "Your basket is empty. Continue shopping", "Basket have product"
+		assert self.is_element_presented(*BasketPageLocators.ALERT_EMPTY_BASKET), \
+			"Message about empty basket is not presented"
 
 	def should_not_disappered_empty_basket(self):
 		assert not self.is_disappeared(*BasketPageLocators.ALERT_EMPTY_BASKET), \
-	       "Empty basket not disappered"
+		   "Empty basket not disappered"

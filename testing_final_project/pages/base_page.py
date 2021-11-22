@@ -20,7 +20,7 @@ class BasePage():
 		link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
 		link.click()
 
-	def should_be_login_link(self):
+	def should_be_login_page(self):
 		assert self.is_element_presented(*BasePageLocators.LOGIN_LINK), "Login link \
 			is not presented"
 
