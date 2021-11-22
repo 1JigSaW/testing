@@ -15,9 +15,13 @@ class ProductPage(BasePage):
 	def should_equal_title_and_alert(self):
 		title_book = self.browser.find_element(*ProductPageLocators.TITLE_BOOK).text
 		alert_book = self.browser.find_element(*ProductPageLocators.ALERT_BOOK).text
-		assert title_book in alert_book, "Different names"
+		print(title_book)
+		print(alert_book)
+		assert title_book == alert_book, "Different names"
 
 	def should_equal_price_and_price_basket(self):
 		price = self.browser.find_element(*ProductPageLocators.PRICE).text
 		price_basket = self.browser.find_element(*ProductPageLocators.PRICE_BASKET).text
-		assert price in price_basket, "Different prices"
+		print(price)
+		print(price_basket)
+		assert price == price_basket, "Different prices"
